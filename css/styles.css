@@ -1,0 +1,24 @@
+:root {
+    /** COLOR PALETTE **/
+    --black: #000000;
+    --white: #FFFFFF;
+    --red: #DB0000;
+    --medium: #564D4D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ff-krona {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+}
+
+.ff-roboto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-light);
+}
