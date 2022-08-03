@@ -20,7 +20,7 @@
 .ff-roboto {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: var(--color-light);
+    color: var(--white);
 }
 
 body{
@@ -47,7 +47,7 @@ a{
     padding: 15px 10px;
 }
 
-section{
+main .group-search{
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -109,3 +109,53 @@ section{
     background-color: var(--medium);
     border-radius: 5px;
 }
+
+/* CARD */
+
+/* group-card > container-card > cover-show > info > h2 > small*/
+/* container - card - img - intro - h1 - p*/
+
+/* .container article{
+    margin: 30px 50px;
+} */
+
+.group-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.container-card img{
+    max-width: 280px;
+    height: auto;
+}
+
+.container-card{
+    /* height: auto; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.title-show{
+    color: var(--white);
+    margin: 10px;
+}
+
+.info{
+    /* position: absolute;
+    width: 280px;
+    background: rgb(27, 27, 27, .5);
+    bottom: 137px; */
+    position: absolute;
+    padding: 10px 0;
+    width: 280px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    bottom: 137px;
+}
+
+.average-star{
+    margin: 10px;
+}
+/* small path {
+    fill: var(--white);
+} */
