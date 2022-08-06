@@ -38,6 +38,7 @@ a{
 }
 
 .name-logo{
+    font-size: 38px;
     color: var(--red);
     margin-left: 10px;
 }
@@ -173,4 +174,73 @@ section .container-card{
 .average-star svg{
     width: 24px;
     margin-right: 5px;
+}
+
+/* SHOW */
+
+main .container-show{
+    margin: 60px 80px;
+}
+
+.container-show figure {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.container-show{
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 32px;
+}
+
+.name-show{
+    color: var(--white);
+    font-size: 32px;
+}
+
+.text-w{
+    color: var(--white);
+}
+
+span svg{
+    width: 24px;
+    margin-right: 5px;
+}
+
+.content-prem-rat{
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.separator{
+    margin: 0 6px;
+    font-size: 30px;
+}
+
+.content-genres{
+    margin-top: 22px;
+    margin-bottom: 30px;
+}
+.content-genres span:nth-of-type(2){
+    margin: 0 5px;
+}
+
+.content-genres span{
+    background-color: var(--medium);
+    border-radius: 4px;
+    padding: 10px 22px;
+}
+
+.summary-space {
+    /* white-space: pre-wrap; */
+    font-size: 17px;
+}
+
+.figure-show img{
+    max-width: 390px;
+    height: auto;
+    border-radius: 20px;
 }
