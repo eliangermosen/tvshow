@@ -31,6 +31,8 @@ a{
     text-decoration: none;
 }
 
+/* HEADER */
+
 .content-logo{
     display: inline-flex;
     flex-direction: row;
@@ -47,6 +49,8 @@ a{
     background-color: var(--medium);
     padding: 15px 10px;
 }
+
+/* SEARCH BAR */
 
 main .group-search{
     /* display: flex;
@@ -121,17 +125,30 @@ main .group-search{
 } */
 
 .group-card {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 10px; */
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
 }
 
 section .container-card{
-    display: flex;
+    /* display: flex;
     align-items: center;
     align-content: center;
+    justify-content: center; */
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .container-card img{
@@ -161,7 +178,7 @@ section .container-card{
     padding: 10px 0;
     width: 280px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-    bottom: 133px;
+    bottom: 0;
 }
 
 .average-star{
@@ -259,7 +276,7 @@ span svg{
     border-radius: 20px;
 }
 
-/* RESPONSIVE */
+/* SHOW RESPONSIVE */
 
 @media screen and (min-width: 809px) {
     .test img{
@@ -336,7 +353,20 @@ footer section{
     margin: 0 10px;
 }
 
-@media screen and (max-width: 600px) {
+/* GENERAL RESPONSIVE */
+
+/* si la ventana del navegador es 768px o menos se ejecutara esto */
+@media screen and (max-width: 768px) {
+    .container-search {
+        width: 582px;
+    }
+}
+
+/* si la ventana del navegador es 600px o menos se ejecutara esto */
+@media screen and (max-width: 610px) {
+    .container-search {
+        width: 420px;
+    }
     footer section {
         display: flex;
         flex-direction: column;
@@ -345,5 +375,11 @@ footer section{
     }
     footer .social{
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .container-search {
+        width: 350px;
     }
 }
