@@ -25,6 +25,9 @@
 
 body{
     background-color: var(--black);
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 a{
