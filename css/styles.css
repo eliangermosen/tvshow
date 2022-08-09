@@ -179,9 +179,9 @@ section .container-card{
     border-radius: 20px;
     position: absolute;
     padding: 10px 0;
-    width: 280px;
+    width: 210px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-    bottom: 0;
+    bottom: 26px;
 }
 
 .average-star{
