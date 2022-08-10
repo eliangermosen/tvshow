@@ -1,5 +1,6 @@
 const d = document,
-    $infoTemplate = d.querySelector(".container-show");
+    $infoTemplate = d.querySelector(".container-show"),
+    $title = d.querySelector('title');
     // $infoTemplate = d.getElementById("info-template");
 
 let id = "",
@@ -22,6 +23,8 @@ const getById = async e => {
 
         //si el parametro ok de la respuesta es falsa lanza el objeto
         if (!res.ok) throw { status: res.status, statusText: res.statusText }
+
+        $title.textContent = `TvShow · ${json.name}`;
 
         $show = `
             <article lass="info-show">

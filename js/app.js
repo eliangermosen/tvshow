@@ -136,32 +136,3 @@ d.addEventListener("click", e => {
 })
 
 d.addEventListener("DOMContentLoaded", e => getAllData());
-
-// (function () {
-//     //codigo que desee
-//     getAllData();
-// })();//estos ultimos parentesis hacen que se ejecute la funcion y es necesario poner punto y coma
-
-// d.addEventListener("click", e => {
-//     if (e.target.matches("article .btn-search")) {
-//         e.preventDefault();
-//         console.log("click a btn");
-//         // getByParams();
-//     }
-// })
-
-// if($card){
-//     console.log("existe")
-//     $card.addEventListener("click", e => {
-//         e.preventDefault();
-//         console.log("click");
-//         getById();
-//     });
-// }
-
-// if($btnsearch){
-//     $btnsearch.addEventListener("click", e => {
-//         e.preventDefault();
-//         console.log("buscar click");
-//     })
-// }
