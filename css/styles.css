@@ -263,8 +263,8 @@ span svg{
 }
 
 .summary-space {
-    /* white-space: pre-wrap; */
-    font-size: 17px;
+    white-space: pre-wrap;
+    font-size: 19px;
 }
 
 .figure-show img{
