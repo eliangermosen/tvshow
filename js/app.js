@@ -3,7 +3,8 @@ const d = document,
     $template = d.getElementById("show-template").content,
     $fragment = d.createDocumentFragment(),
     $card = d.getElementById("card"),
-    $btnsearch = d.getElementById("btn-search");
+    $btnsearch = d.getElementById("btn-search"),
+    $loader = d.querySelector(".loader");
     // $infoTemplate = d.getElementById("info-template");
     // $card = d.querySelector(".container-card");
 
@@ -12,6 +13,9 @@ let showSearch = "",
 
 const getAllData = async () => {
     try {
+
+        $loader.style.display = "flex";
+
         let apiAll = `https://api.tvmaze.com/shows`,
             res = await fetch(apiAll),
             json = await res.json();
@@ -45,6 +49,8 @@ const getAllData = async () => {
 
             //agregamos como hijo al clon
             $fragment.appendChild($clone);
+
+            $loader.style.display = "none";
         });
 
         //antes de agregar el resultado 
@@ -55,6 +61,7 @@ const getAllData = async () => {
     } catch (err) {
         console.log(err);
         let message = err.statusText || "Ocurrio un Error";
+        $loader.style.display = "none";
     }
 }
 

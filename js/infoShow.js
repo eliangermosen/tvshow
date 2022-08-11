@@ -1,6 +1,7 @@
 const d = document,
     $infoTemplate = d.querySelector(".container-show"),
-    $title = d.querySelector('title');
+    $title = d.querySelector('title'),
+    $loader = d.querySelector(".loader");
     // $infoTemplate = d.getElementById("info-template");
 
 let id = "",
@@ -14,6 +15,9 @@ const getById = async e => {
     console.log(url.searchParams.get("id"));
     id = url.searchParams.get("id");
     try {
+
+        $loader.style.display = "flex";
+
         let apiById = `https://api.tvmaze.com/shows/${id}`,
             res = await fetch(apiById),
             json = await res.json();
@@ -56,11 +60,14 @@ const getById = async e => {
                 </figure>
         `;
 
+        $loader.style.display = "none";
+
         $infoTemplate.innerHTML = $show;
 
     } catch (err) {
         console.log(err);
         let message = err.statusText || "Ocurrio un Error";
+        $loader.style.display = "none";
     }
 }
 
