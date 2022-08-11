@@ -78,7 +78,7 @@ const getByParams = async (e)=> {
         if (!res.ok) throw { status: res.status, statusText: res.statusText }
 
         if (json.length === 0) {
-            $shows.innerHTML = `<h2>No existen resultados de shows para el criterio de busqueda <mark>${showSearch}</mark></h2>`;
+            $shows.innerHTML = `<h2 class="text-w">There are no show results for the search criteria <span class="criteria">${showSearch}</span></h2>`;
         } else {
             json.forEach(el => {
                 $template.querySelector("article").id = el.show.id;

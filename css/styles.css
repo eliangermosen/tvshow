@@ -87,6 +87,10 @@ main .group-search{
     font-size: 15px;
 }
 
+input:focus{
+    outline: 2px solid var(--white);
+}
+
 .container-search button {
     position: absolute;
     border: none;
@@ -196,10 +200,20 @@ section .container-card{
     margin-right: 5px;
 }
 
+.criteria{
+    background-color: var(--red);
+    padding: 1px;
+}
+
 /* SHOW */
 
+.main-show{
+    display: grid;
+    align-items: center;
+}
+
 main .container-show{
-    margin: 50px 80px;
+    margin: 0 80px;
 }
 
 .info-show{
