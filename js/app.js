@@ -2,7 +2,7 @@ const d = document,
     $shows = d.getElementById("shows"),
     $template = d.getElementById("show-template").content,
     $fragment = d.createDocumentFragment(),
-    $card = d.getElementById("card"),
+    // $card = d.getElementById("card"),
     $btnsearch = d.getElementById("btn-search"),
     $loader = d.querySelector(".loader");
     // $infoTemplate = d.getElementById("info-template");
@@ -30,10 +30,11 @@ const getAllData = async () => {
             // console.log(el);
             // console.log(el.show);
             $template.querySelector("article").id = el.id;
-            // dentro del template busca el h3 y en el textContent pon el nombre del show
+            // dentro del template busca el h2 y en el textContent pon el nombre del show
             $template.querySelector("h2").textContent = el.name;
             // si no tiene imagen le asigno una no encontrada de la misma api
             $template.querySelector("img").src = el.image ? el.image.medium : "http://static.tvmaze.com/images/no-img/no-img-portrait-text.png";
+            $template.querySelector("img").id = el.id;
             $template.querySelector("img").alt = el.name;
 
             // $template.querySelector("small").textContent = el.rating.average;
@@ -68,6 +69,9 @@ const getAllData = async () => {
 // search by params: https://api.tvmaze.com/search/shows?q=stranger
 const getByParams = async (e)=> {
     try {
+
+        $loader.style.display = "flex";
+
         let apiParams = `https://api.tvmaze.com/search/shows?q=${showSearch}`,
             res = await fetch(apiParams),
             json = await res.json();
@@ -106,16 +110,18 @@ const getByParams = async (e)=> {
             $shows.innerHTML = "";
             //apendchild agrega despues del ultimo elemento
             $shows.appendChild($fragment);
+            $loader.style.display = "none";
         }
     } catch (err) {
         console.log(err);
         let message = err.statusText || "Ocurrio un Error";
         // $shows.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+        $loader.style.display = "none";
     }
 }
 
 d.addEventListener("click", e => {
-    if (e.target.matches("article .btn-search")) {
+    if (e.target.closest("article .btn-search")) {
         e.preventDefault();
         console.log("click a btn");
         console.log(document.querySelector(".input").value.toLowerCase());
@@ -123,7 +129,7 @@ d.addEventListener("click", e => {
         console.log(showSearch);
         getByParams();
     }
-    else if(e.target.matches(".container-card")){
+    else if(e.target.closest(".container-card")){
         e.preventDefault();
         console.log("click card");
         console.log(e.target.id);
