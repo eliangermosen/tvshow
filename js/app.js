@@ -90,6 +90,7 @@ const getByParams = async (e)=> {
                 $template.querySelector("h2").textContent = el.show.name;
                 //el summary como viene en HTML se le agrega 
                 $template.querySelector("img").src = el.show.image ? el.show.image.medium : "http://static.tvmaze.com/images/no-img/no-img-portrait-text.png";
+                $template.querySelector("img").id = el.show.id;
                 $template.querySelector("img").alt = el.show.name;
 
                 $template.querySelector("small").innerHTML = `
