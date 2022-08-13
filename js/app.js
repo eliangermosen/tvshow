@@ -139,7 +139,7 @@ d.addEventListener("click", e => {
         console.log(window.location);
         // console.log(`${window.location.pathname}show.html/${showSearchById}`);
         // FUNCIONA
-        const url = new URL(`https://elianmtg.github.io/tvshow`);
+        const url = new URL(`https://elianmtg.github.io/tvshow/show`);
         url.searchParams.append("id", showSearchById);
         url.searchParams.get("id");
         console.log(url);
