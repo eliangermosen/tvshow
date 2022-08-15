@@ -110,8 +110,12 @@ input:focus{
     border-radius: 5px;
     padding-top: 4px;
     padding-right: 4px;
-    background-color: var(--red);
+    background: rgba(219, 0, 0, 0.9);
     color: var(--white);
+    transition: all 0.4s ease;
+}
+.btn-search:hover {
+    background: rgba(219, 0, 0, 1);
 }
 
 .btn-options {
@@ -291,6 +295,26 @@ span svg{
     max-width: 390px;
     height: auto;
     border-radius: 20px;
+}
+
+.container-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.btn-load{
+    border-radius: 10px;
+    background: rgba(219, 0, 0, 0.9);
+    color: var(--white);
+    font-size: 16px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.btn-load:hover{
+    /* background: rgba(219, 0, 0, 0.7); */
+    background: rgba(219, 0, 0, 1);
 }
 
 /* SHOW RESPONSIVE */
