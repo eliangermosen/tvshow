@@ -57,7 +57,7 @@ const getAllData = async () => {
         $shows.appendChild($fragment);
 
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         let message = err.statusText || "Ocurrio un Error";
         $loader.style.display = "none";
     }
@@ -113,7 +113,7 @@ const getByParams = async (e)=> {
             $loader.style.display = "none";
         }
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         let message = err.statusText || "Ocurrio un Error";
         // $shows.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
         $loader.style.display = "none";
@@ -123,27 +123,27 @@ const getByParams = async (e)=> {
 d.addEventListener("click", e => {
     if (e.target.closest("article .btn-search")) {
         e.preventDefault();
-        console.log("click a btn");
-        console.log(document.querySelector(".input").value.toLowerCase());
+        // console.log("click a btn");
+        // console.log(document.querySelector(".input").value.toLowerCase());
         showSearch = document.querySelector(".input").value.toLowerCase();
-        console.log(showSearch);
+        // console.log(showSearch);
         getByParams();
     }
     else if(e.target.closest(".container-card")){
         e.preventDefault();
-        console.log("click card");
-        console.log(e.target.id);
+        // console.log("click card");
+        // console.log(e.target.id);
         showSearchById = e.target.id;
-        console.log(showSearchById);
-        console.log(window.location);
+        // console.log(showSearchById);
+        // console.log(window.location);
         // console.log(`${window.location.pathname}show.html/${showSearchById}`);
         // FUNCIONA
         const url = new URL(`https://elianmtg.github.io/tvshow/show`);
         url.searchParams.append("id", showSearchById);
         url.searchParams.get("id");
-        console.log(url);
-        console.log(url.searchParams.get("id"));
-        console.log(url.href);
+        // console.log(url);
+        // console.log(url.searchParams.get("id"));
+        // console.log(url.href);
         d.location.href = url.href;
     }
 })
@@ -188,7 +188,7 @@ const getNextData = async (nextShows) => {
         $shows.appendChild($fragment);
 
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         let message = err.statusText || "Ocurrio un Error";
         $loader.style.display = "none";
     }
@@ -196,14 +196,14 @@ const getNextData = async (nextShows) => {
 
 $btnload.addEventListener("click", e => {
     e.preventDefault();
-    console.log("carga");
-    console.log($shows.lastElementChild.id);
+    // console.log("carga");
+    // console.log($shows.lastElementChild.id);
     lastShow = $shows.lastElementChild.id;
     lastShow++;
-    console.log(lastShow);
+    // console.log(lastShow);
     let next = lastShow + 19;
     // next+= 19;
-    console.log(next);
+    // console.log(next);
     getNextData(next);
 })
 
