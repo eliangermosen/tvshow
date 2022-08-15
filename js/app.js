@@ -91,6 +91,9 @@ const getByParams = async (e)=> {
                 $template.querySelector("img").src = el.show.image ? el.show.image.medium : "http://static.tvmaze.com/images/no-img/no-img-portrait-text.png";
                 $template.querySelector("img").id = el.show.id;
                 $template.querySelector("img").alt = el.show.name;
+                $template.querySelector("div").id = el.show.id;
+                $template.querySelector("h2").id = el.show.id;
+                $template.querySelector("small").id = el.show.id;
 
                 $template.querySelector("small").innerHTML = `
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -170,6 +173,9 @@ const getNextData = async (nextShows) => {
             $template.querySelector("img").src = element.image ? element.image.medium : "http://static.tvmaze.com/images/no-img/no-img-portrait-text.png";
             $template.querySelector("img").id = element.id;
             $template.querySelector("img").alt = element.name;
+            $template.querySelector("div").id = element.id;
+            $template.querySelector("h2").id = element.id;
+            $template.querySelector("small").id = element.id;
 
             $template.querySelector("small").innerHTML = `
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
