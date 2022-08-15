@@ -308,7 +308,8 @@ span svg{
     background: rgba(219, 0, 0, 0.9);
     color: var(--white);
     font-size: 16px;
-    padding: 10px 30px;
+    padding: 10px 60px;
+    border: none;
     cursor: pointer;
     transition: all 0.4s ease;
 }
